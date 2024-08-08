@@ -3,7 +3,7 @@ import React from "react";
 import "./Cards.css";
 import Buttons from "../Buttons/Buttons";
 
-function Cards({ money, onDeposit }) { // Add onDeposit prop
+function Cards({ money }) { // Add onDeposit prop
   const { title, Image, amount } = money;
 
   return (
@@ -19,7 +19,6 @@ function Cards({ money, onDeposit }) { // Add onDeposit prop
         <Buttons
           title={"Deposit"}
           type={"deposit"}
-          onClick={onDeposit}
         />
       </div>
     </div>

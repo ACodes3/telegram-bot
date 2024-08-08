@@ -6,9 +6,14 @@ const app = express();
 
 require("dotenv").config();
 
+// STRIPE INTEGRATION
+app.use(express.json()); 
+const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+
+// Telegram BOT
 const TOKEN = process.env.TOKEN;
 
-const bot = new TelegramBot(TOKEN, {polling:true});
+const bot = new TelegramBot(TOKEN, { polling: true });
 
 bot.on("message", async (message) => {
     console.log(message);

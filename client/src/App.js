@@ -13,17 +13,12 @@ function App() {
     tele.ready();
   })
 
-  const onDeposit = () =>{
-    tele.MainButton.text = "Deposit :)";
-    tele.MainButton.show();
-  }
-
   return (
     <div>
       <h1 className='heading'>Deposit Money</h1>
       <div className='cards__container'>
         {money.map((money) => (
-          <Cards money={money} key={money.id} onDeposit={onDeposit} />
+          <Cards money={money} key={money.id} />
         ))}
       </div>
 
