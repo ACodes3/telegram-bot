@@ -1,18 +1,12 @@
-const express = require("express");
-const PORT = process.env.PORT || 4040;
+const TelegramBot = require('node-telegram-bot-api');
+require("dotenv").config();
 
-const app = express();
-app.use(express.json());
+const TOKEN = process.env.TOKEN;
 
-app.post("*", async (req,res) =>{
-    res.send("Hello Post");
+const bot = new TelegramBot(TOKEN, {polling:true});
+
+bot.on("message", (message) => {
+
+    console.log(message.text);
+    console.log(message.from.id);
 });
-
-app.get("*", async (req,res) =>{
-    res.send("Hello Get");
-});
-
-app.listen(PORT, function (err) {
-    if (err) console.log(err);
-    console.log("Server listening to PORT", PORT);
-})
