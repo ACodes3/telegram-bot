@@ -1,0 +1,32 @@
+:root{
+    --primary-color: #e0c521;
+}
+
+.btn{
+    padding: .6rem .8rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    width: 250px;
+    margin-left: 10px;
+    box-shadow: 1px -3px 20px -5px rgba(0, 0, 0, .77);
+    cursor: pointer;
+}
+
+.btn.deposit{
+    background-color: var(--primary-color);
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn.deposit:hover{
+    background-color: #cab320;
+}
+
+.btn.deposit:active{
+    background-color: #ad9a1c;
+}

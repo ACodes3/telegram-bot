@@ -1,0 +1,50 @@
+:root{
+    --primary-color: #e0c521;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    height: 250px;
+    border: 2px solid var(--primary-color);
+    padding: .5rem .3rem;
+    margin: 13px 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.card__title{
+    font-weight: 400;
+    text-align: center;
+}
+
+.card__title .card__amount{
+    font-weight: bold;
+}
+
+.image__container{
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.image__container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card__amount{
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+}
