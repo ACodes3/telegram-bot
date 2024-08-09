@@ -58,7 +58,7 @@ This project demonstrates the integration of third-party services by developing 
 
 - **Source Code**: The complete source code for the mini-app is provided in this repository.
 - **Documentation**: Minimal documentation is provided for setup and usage of the mini-app.
-- **Live Demo**: Prepare a live demo to showcase the functionality of the mini-app during the interview presentation.
+- **Live Demo**: [Live Demo](https://telegram-bot-frontend-five.vercel.app/).
 
 ### License
 
