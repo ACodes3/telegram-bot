@@ -12,7 +12,7 @@ function Buttons({ type, title, disable, onClick, product }) {
       "Content-Type": "application/json",
     };
 
-    return fetch(`https://telegram-bot-server-gamma.vercel.app/create-checkout-session`, {
+    return fetch(`http://localhost:4040/create-checkout-session`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
