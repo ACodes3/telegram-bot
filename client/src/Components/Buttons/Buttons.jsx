@@ -14,7 +14,7 @@ function Buttons({ type, title, disable, onClick, product, onPaymentSuccess }) {
       "Content-Type": "application/json",
     };
 
-    return fetch(`https://telegram-bot-server-theta.vercel.app/create-checkout-session`, {
+    return fetch(`https://telegram-bot-server-trxg.onrender.com/create-checkout-session`, {
       method: "POST",
       headers,
       body: JSON.stringify(body),
