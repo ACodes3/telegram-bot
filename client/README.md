@@ -36,7 +36,6 @@ This project demonstrates the integration of third-party services by developing 
 2. **Install dependencies**:
    ```bash
    npm install
-   cd stripe-mini-app
    ```
 3. **Configure Environment Variables**:
    ```bash
