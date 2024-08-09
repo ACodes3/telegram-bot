@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Cards from './Components/Cards/Cards';
 import { getData } from "./db/db";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const tele = window.Telegram.WebApp;
 
 function App() {
   const [products, setProducts] = useState([]);
-
 
   useEffect(() => {
     // Fetch data and update state
@@ -15,9 +16,9 @@ function App() {
     setProducts(data);
   }, []);
 
-  useEffect(() =>{
+  useEffect(() => {
     tele.ready();
-  })
+  }, []);
 
   return (
     <div>
@@ -27,6 +28,7 @@ function App() {
           <Cards key={product.amount} money={product} />
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 }

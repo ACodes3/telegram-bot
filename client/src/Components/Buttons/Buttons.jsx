@@ -1,8 +1,9 @@
 import React from "react";
 import "./Buttons.css";
 import StripeCheckout from "react-stripe-checkout";
+import { toast } from 'react-toastify';
 
-function Buttons({ type, title, disable, onClick, product }) {
+function Buttons({ type, title, disable, onClick, product, onPaymentSuccess }) {
   const makePayment = (token) => {
     const body = {
       token,
@@ -17,12 +18,18 @@ function Buttons({ type, title, disable, onClick, product }) {
       headers,
       body: JSON.stringify(body),
     })
-      .then((response) => {
-        console.log("RESPONSE", response);
-        const { status } = response;
-        console.log("STATUS", status);
+      .then((response) => response.json()) // Parse the JSON response
+      .then((data) => {
+        if (data.success) {
+          onPaymentSuccess("Transaction successful!");
+        } else {
+          onPaymentSuccess("Transaction failed!");
+        }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error("Payment error:", error);
+        onPaymentSuccess("Transaction failed!");
+      });
   };
 
   return (
