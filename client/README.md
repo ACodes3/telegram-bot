@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Mini-App with Fiat Payment Using Stripe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+This project demonstrates the integration of third-party services by developing a mini-app for fiat payments using Stripe in test mode. The mini-app is built using React and is connected to a Telegram bot, enabling users to process payments directly through the interface.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Simple Payment Interface**: The app features a user-friendly interface with multiple buttons for selecting deposit amounts (e.g., 20€, 40€, 100€).
+- **Stripe Integration**: Utilizes Stripe's test API to securely process fiat payments.
+- **Payment Status Feedback**: Displays the result of each payment transaction (success or error) to the user.
+- **Telegram Bot Integration**: Connects with a Telegram bot to facilitate payment notifications and interactions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js
+- **Backend**: Node.js
+- **Payment Gateway**: Stripe API (Test mode)
+- **Bot Integration**: Telegram Bot API
 
-### `npm test`
+## Setup and Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- **Node.js**: Ensure you have Node.js installed on your system.
+- **Stripe Account**: Create a Stripe test account and obtain your API keys.
+- **Telegram Bot**: Set up a Telegram bot and obtain the API token.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/stripe-mini-app.git
+   cd stripe-mini-app
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   cd stripe-mini-app
+   ```
+3. **Configure Environment Variables**:
+   ```bash
+    REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+    REACT_APP_TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   ```
+4. **Start the Development Server**:
+   ```bash
+    npm start
+     ```
+### Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Open the app in your browser.
+- Select a deposit amount by clicking one of the buttons (e.g., 20€, 40€, 100€).
+- Follow the on-screen instructions to complete the payment process using Stripe.
+- The result of the transaction (success or error) will be displayed on the screen.
+- Payment notifications will also be sent via the connected Telegram bot.
 
-### `npm run eject`
+## Deliverables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Source Code**: The complete source code for the mini-app is provided in this repository.
+- **Documentation**: Minimal documentation is provided for setup and usage of the mini-app.
+- **Live Demo**: Prepare a live demo to showcase the functionality of the mini-app during the interview presentation.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
