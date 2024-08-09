@@ -19,35 +19,23 @@ app.get("/", (req, res) => {
 require("dotenv").config();
 
 // STRIPE INTEGRATION
-app.post("/create-checkout-session", async (req, res) => {
-    const { amount } = req.body;
-  
-    try {
-      const session = await stripe.checkout.sessions.create({
-        payment_method_types: ['card'],
-        line_items: [
-          {
-            price_data: {
-              currency: 'eur',
-              product_data: {
-                name: 'Deposit',
-              },
-              unit_amount: amount,
-            },
-            quantity: 1,
-          },
-        ],
-        mode: 'payment',
-        success_url: 'http://localhost:3000/success',
-        cancel_url: 'http://localhost:3000/cancel',
-      });
-  
-      res.json({ id: session.id });
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
+app.post('/create-checkout-session', async (req, res) => {
+  const { token, product } = req.body;
+
+  try {
+    const charge = await stripe.charges.create({
+      amount: product.amount * 100, // Convert to cents
+      currency: 'eur',
+      source: token.id,
+      description: `Deposit for ${product.name}`,
+    });
+
+    res.status(200).send({ success: true, charge });
+  } catch (error) {
+    console.error("Error creating charge:", error);
+    res.status(500).send({ error: "Internal Server Error" });
+  }
+});
 
 // Telegram BOT
 const TOKEN = process.env.TOKEN;
