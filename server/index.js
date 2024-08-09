@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { Telegraf } = require('telegraf')
 const TelegramBot = require('node-telegram-bot-api');
 const express = require("express");
 const cors = require('cors');
@@ -16,8 +17,6 @@ app.use(cors());
 app.get("/", (req, res) => {
     res.send("IT WORKS AT MY WEBSITE");
   });
-
-require("dotenv").config();
 
 // STRIPE INTEGRATION
 app.post('/create-checkout-session', async (req, res) => {
@@ -47,6 +46,7 @@ bot.on("message", async (message) => {
     console.log(message);
     await handleMessage(message);
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

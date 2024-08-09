@@ -1,3 +1,4 @@
+const { Telegraf } = require('telegraf')
 const { getAxiosInstance } = require("./axios");
 const { errorHandler } = require("./helper");
 
@@ -7,11 +8,12 @@ const TOKEN = process.env.TOKEN;
 const BASE_URL = `https://api.telegram.org/bot${TOKEN}`;
 const axiosInstance = getAxiosInstance(BASE_URL);
 
-function sendMessage(chatId, messageText) {
+function sendMessage(chatId, messageText, options = {}) {
     return axiosInstance
         .get("sendMessage", {
             chat_id: chatId,
             text: messageText,
+            ...options
         })
         .catch((ex) => {
             errorHandler(ex, "sendMessage", "axios");
@@ -74,7 +76,42 @@ async function handleMessage(messageObj) {
                             chatId,
                             `You lost $${betAmount}. Your new balance is $${users[chatId].balance}. Better luck next time!`
                         );
-                    }
+                    };
+                case "webapp":
+                    const webAppUrl = "https://telegram-bot-frontend-five.vercel.app/"; // Replace with your web app URL
+                    const replyMarkup = {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: "Open Web App",
+                                    url: webAppUrl
+                                }
+                            ]
+                        ]
+                    };
+                    return sendMessage(
+                        chatId,
+                        "Click the button below to open the web app:",
+                        { reply_markup: JSON.stringify(replyMarkup) }
+                    );
+                    case "webappbotfather":
+                    const webAppUrlBotFather = "https://t.me/naloga_testing_bot/mywebapp"; // Replace with your web app URL
+                    const replyMarkupBotFather = {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: "Open Web App from BotFather",
+                                    url: webAppUrlBotFather
+                                }
+                            ]
+                        ]
+                    };
+                    return sendMessage(
+                        chatId,
+                        "Click the button below to open the web app:",
+                        { reply_markup: JSON.stringify(replyMarkupBotFather) }
+                    );
+
                 default:
                     return sendMessage(chatId, "Hey, I don't recognize that command. Try /start to see what I can do!");
             }
