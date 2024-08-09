@@ -1,5 +1,9 @@
 # Telegram Bot and Payment Integration Project
 
+## Links
+
+You can interact with the test bot here: [Test Bot](https://web.telegram.org/k/#@naloga_testing_bot)
+
 ## Overview
 
 This project consists of three main components:
