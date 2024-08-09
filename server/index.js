@@ -1,10 +1,8 @@
 require("dotenv").config();
-const { Telegraf } = require('telegraf')
 const TelegramBot = require('node-telegram-bot-api');
 const express = require("express");
 const cors = require('cors');
 const stripe = require('stripe')(process.env.REACT_APP_STRIPE_PRIVATE_KEY);
-const { v4: uuidv4 } = require('uuid');
 const { handleMessage } = require("./controller/lib/telegram");
 const PORT = process.env.PORT || 4040;
 const app = express();
@@ -47,7 +45,7 @@ bot.on("message", async (message) => {
     await handleMessage(message);
 });
 
-
+//LISTENING ON PORT
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

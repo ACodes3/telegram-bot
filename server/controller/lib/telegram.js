@@ -78,7 +78,7 @@ async function handleMessage(messageObj) {
                         );
                     };
                 case "webapp":
-                    const webAppUrl = "https://telegram-bot-frontend-five.vercel.app/"; // Replace with your web app URL
+                    const webAppUrl = "https://telegram-bot-frontend-five.vercel.app/"; // Replace with web app URL after deploying
                     const replyMarkup = {
                         inline_keyboard: [
                             [
@@ -95,7 +95,7 @@ async function handleMessage(messageObj) {
                         { reply_markup: JSON.stringify(replyMarkup) }
                     );
                     case "webappbotfather":
-                    const webAppUrlBotFather = "https://t.me/naloga_testing_bot/mywebapp"; // Replace with your web app URL
+                    const webAppUrlBotFather = "https://t.me/naloga_testing_bot/mywebapp"; // Replace with web app URL after making Telegram Web App
                     const replyMarkupBotFather = {
                         inline_keyboard: [
                             [
