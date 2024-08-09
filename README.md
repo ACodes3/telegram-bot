@@ -42,7 +42,7 @@ The Telegram bot responds to basic commands relevant to online gambling, such as
      ```
 
 5. **Deployment**:
-   - Deployed on Vercel.
+   - Deployed on Render.
 
 ## Subtask 2: Mini-App with Fiat Payment Using Stripe
 
@@ -95,11 +95,11 @@ This mini-app includes a React frontend and a Node.js in the backend that allows
      ```
 
 3. **Deployment**:
-   - The backend is deployed on Vercel. Due to slow response times, it is recommended to run the backend locally for a better experience.
+   - The backend is deployed on Render. Due to slow response times, it is recommended to run the backend locally for a better experience.
 
 ### Known Issues
 
-- **Backend Deployment**: The backend deployment on Vercel is experiencing slow response times. For a better experience, run the backend locally.
+- **Backend Deployment**: The backend deployment on Render is experiencing slow response times. For a better experience, run the backend locally.
 
 ## Additional Notes
 
