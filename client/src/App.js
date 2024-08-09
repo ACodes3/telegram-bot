@@ -3,14 +3,21 @@ import './App.css';
 import Cards from './Components/Cards/Cards';
 import { getData } from "./db/db";
 
+const tele = window.Telegram.WebApp;
+
 function App() {
   const [products, setProducts] = useState([]);
+
 
   useEffect(() => {
     // Fetch data and update state
     const data = getData();
     setProducts(data);
   }, []);
+
+  useEffect(() =>{
+    tele.ready();
+  })
 
   return (
     <div>
