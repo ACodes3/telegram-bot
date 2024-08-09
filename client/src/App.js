@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Cards from './Components/Cards/Cards';
 import { getData } from "./db/db";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+//Connecting with Telegram Bot
 const tele = window.Telegram.WebApp;
 
 function App() {

@@ -6,8 +6,8 @@ import { toast } from "react-toastify";
 function Cards({ money }) {
   const { title, Image, amount } = money;
 
+  // Displaying a toast notification with the success or failure message
   const handlePaymentSuccess = (message) => {
-    // Display a toast notification with the success or failure message
     toast(message);
   };
 
@@ -25,7 +25,7 @@ function Cards({ money }) {
           title={"Deposit"}
           type={"deposit"}
           product={money}
-          onPaymentSuccess={handlePaymentSuccess} // Pass the handler function
+          onPaymentSuccess={handlePaymentSuccess}
         />
       </div>
     </div>
