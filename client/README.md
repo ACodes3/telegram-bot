@@ -30,7 +30,7 @@ This project demonstrates the integration of third-party services by developing 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/stripe-mini-app.git
+   git clone https://github.com/ACodes3/stripe-mini-app.git
    cd client
    ```
 2. **Install dependencies**:
@@ -39,8 +39,8 @@ This project demonstrates the integration of third-party services by developing 
    ```
 3. **Configure Environment Variables**:
    ```bash
-    REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
-    REACT_APP_TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+    REACT_APP_STRIPE_KEY=your_stripe_public_key
+    TOKEN=your_telegram_bot_token
    ```
 4. **Start the Development Server**:
    ```bash
