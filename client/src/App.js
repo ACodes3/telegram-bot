@@ -1,27 +1,25 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import './App.css';
 import Cards from './Components/Cards/Cards';
-const { getData } = require("./db/db");
-
-const tele = window.Telegram.WebApp;
-
-const money = getData();
+import { getData } from "./db/db";
 
 function App() {
+  const [products, setProducts] = useState([]);
 
-  useEffect(()=>{
-    tele.ready();
-  })
+  useEffect(() => {
+    // Fetch data and update state
+    const data = getData();
+    setProducts(data);
+  }, []);
 
   return (
     <div>
       <h1 className='heading'>Deposit Money</h1>
       <div className='cards__container'>
-        {money.map((money) => (
-          <Cards money={money} key={money.id} />
+        {products.map((product) => (
+          <Cards key={product.amount} money={product} />
         ))}
       </div>
-
     </div>
   );
 }
