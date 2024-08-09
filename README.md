@@ -10,7 +10,7 @@ This project consists of three main components:
 
 1. **Telegram Bot**: A basic bot that interacts with users and supports commands relevant to an online gambling context.
 2. **Mini-App with Fiat Payment**: A simple application for processing fiat payments using Stripe.
-3. **Deployment Information**: Details on how to run and deploy the project, including known issues.
+3. **Deployment Information**: Details on how to run and deploy the project, including known issues..
 
 ## Subtask 1: Telegram Bot
 
