@@ -50,22 +50,7 @@ This repository contains the source code for a basic Telegram bot integrated wit
     REACT_APP_STRIPE_PRIVATE_KEY=your_stripe_private_key
     ```
 
-4. **Deploy to Netlify:**
-
-    - Log in to Netlify:
-
-      ```bash
-      netlify login
-      ```
-
-    - Initialize and deploy:
-
-      ```bash
-      netlify init
-      netlify deploy
-      ```
-
-5. **Set environment variables on Vercel:**
+4. **Set environment variables and deploy on Vercel:**
 
    Go to the [Vercel dashboard](https://vercel.com/), click Add Project, select repository and choose the server branch, click on deploy, add the environment variables `TOKEN` and `REACT_APP_STRIPE_PRIVATE_KEY` under the "Build & Deploy" settings finally, navigate to the site.
 
