@@ -62,10 +62,6 @@ Once deployed, you can interact with the bot using Telegram by sending commands 
 
 - **POST /**: Handles incoming Telegram messages and processes them based on the command.
 
-### Source Code
-
-The main bot logic is implemented in the `netlify/functions/telegram-bot.js` file.
-
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
