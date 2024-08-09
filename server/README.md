@@ -1,6 +1,6 @@
 # Telegram Bot with Stripe Integration
 
-This repository contains the source code for a basic Telegram bot integrated with Stripe, designed for deployment on Netlify using serverless functions.
+This repository contains the source code for a basic Telegram bot integrated with Stripe, designed for deployment on Vercel using serverless functions.
 
 ## Features
 

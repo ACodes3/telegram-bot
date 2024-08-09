@@ -61,7 +61,7 @@ This mini-app includes a React frontend and a Node.js in the backend that allows
 
    - Create a `.env` file and add your Stripe public key:
      ```env
-     REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key_here
+     REACT_APP_STRIPE_KEY=your_stripe_public_key_here
      ```
 
    - Run the React app locally:
@@ -82,7 +82,7 @@ This mini-app includes a React frontend and a Node.js in the backend that allows
 
    - Create a `.env` file and add your Stripe secret key:
      ```env
-     STRIPE_SECRET_KEY=your_stripe_secret_key_here
+     REACT_APP_STRIPE_PRIVATE_KEY=your_stripe_secret_key_here
      ```
 
    - Run the backend server locally:
