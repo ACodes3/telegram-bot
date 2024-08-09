@@ -31,7 +31,7 @@ This project demonstrates the integration of third-party services by developing 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/stripe-mini-app.git
-   cd stripe-mini-app
+   cd client
    ```
 2. **Install dependencies**:
    ```bash
