@@ -14,7 +14,7 @@ This repository contains the source code for a basic Telegram bot integrated wit
 - **Language**: JavaScript (Node.js)
 - **Frameworks**: Express.js, node-telegram-bot-api
 - **Payment Gateway**: Stripe
-- **Deployment**: Netlify (Serverless Functions)
+- **Deployment**: Vercel (Serverless Functions)
 
 ## Setup and Deployment
 
@@ -24,7 +24,7 @@ This repository contains the source code for a basic Telegram bot integrated wit
 - npm or yarn
 - A Telegram Bot Token from [BotFather](https://core.telegram.org/bots#botfather)
 - A Stripe account and API key
-- Netlify CLI
+- Vercel CLI
 
 ### Installation
 
