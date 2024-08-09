@@ -65,9 +65,9 @@ This repository contains the source code for a basic Telegram bot integrated wit
       netlify deploy
       ```
 
-5. **Set environment variables on Netlify:**
+5. **Set environment variables on Vercel:**
 
-   Go to the [Netlify dashboard](https://app.netlify.com/), navigate to your site, and add the environment variables `TOKEN` and `REACT_APP_STRIPE_PRIVATE_KEY` under the "Build & Deploy" settings.
+   Go to the [Vercel dashboard](https://vercel.com/), click Add Project, select repository and choose the server branch, click on deploy, add the environment variables `TOKEN` and `REACT_APP_STRIPE_PRIVATE_KEY` under the "Build & Deploy" settings finally, navigate to the site.
 
 ### Testing the Bot
 
