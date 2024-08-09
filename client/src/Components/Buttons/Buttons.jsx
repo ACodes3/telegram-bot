@@ -2,6 +2,9 @@ import React from "react";
 import "./Buttons.css";
 import StripeCheckout from "react-stripe-checkout";
 
+let DOMAIN = process.env.REACT_APP_DOMAIN;
+console.log("Domain:", DOMAIN);
+
 function Buttons({ type, title, disable, onClick, product }) {
   const makePayment = (token) => {
     const body = {
@@ -27,11 +30,11 @@ function Buttons({ type, title, disable, onClick, product }) {
 
   return (
     <StripeCheckout
-      stripeKey="pk_test_51Nyb6cJZ876BzVvRJL8XIXItOsFeCvVaNQsjk2aSQgIUqrBAfo90LqKVkZNPe5S4UpYCAWwAxehMRdYMSabS2bvD00K34tcc1f"
+      stripeKey={process.env.REACT_APP_STRIPE_KEY}
       token={makePayment}
       name="Deposit"
       amount={product.amount * 100} // Convert to cents
-      currency="EUR" 
+      currency="EUR"
     >
       <button
         className={`btn ${type === "deposit" && "deposit"}`}

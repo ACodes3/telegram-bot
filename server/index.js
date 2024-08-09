@@ -1,7 +1,8 @@
+require("dotenv").config();
 const TelegramBot = require('node-telegram-bot-api');
 const express = require("express");
 const cors = require('cors');
-const stripe = require('stripe')('sk_test_51Nyb6cJZ876BzVvReRs8lyArujHATJA4Od5YRU0N0dmCe61vV80UL2yURF0e5A8qiDApTk7Srbo95o2nzRDLGejR00S1c7yKQJ');
+const stripe = require('stripe')(process.env.REACT_APP_STRIPE_PRIVATE_KEY);
 const { v4: uuidv4 } = require('uuid');
 const { handleMessage } = require("./controller/lib/telegram");
 const PORT = process.env.PORT || 4040;
