@@ -1,6 +1,6 @@
 # Telegram Bot with Stripe Integration
 
-This repository contains the source code for a basic Telegram bot integrated with Stripe, designed for deployment on Vercel using serverless functions.
+This repository contains the source code for a basic Telegram bot integrated with Stripe, designed for deployment on Render using serverless functions.
 
 ## Features
 
@@ -14,7 +14,7 @@ This repository contains the source code for a basic Telegram bot integrated wit
 - **Language**: JavaScript (Node.js)
 - **Frameworks**: Express.js, node-telegram-bot-api
 - **Payment Gateway**: Stripe
-- **Deployment**: Vercel (Serverless Functions)
+- **Deployment**: Render
 
 ## Setup and Deployment
 
@@ -24,7 +24,7 @@ This repository contains the source code for a basic Telegram bot integrated wit
 - npm or yarn
 - A Telegram Bot Token from [BotFather](https://core.telegram.org/bots#botfather)
 - A Stripe account and API key
-- Vercel CLI
+- Render Account
 
 ### Installation
 
