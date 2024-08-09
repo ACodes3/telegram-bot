@@ -28,7 +28,7 @@ app.post('/create-checkout-session', async (req, res) => {
       amount: product.amount * 100, // Convert to cents
       currency: 'eur',
       source: token.id,
-      description: `Deposit for ${product.name}`,
+      description: `Deposit for telegram bot`,
     });
 
     res.status(200).send({ success: true, charge });

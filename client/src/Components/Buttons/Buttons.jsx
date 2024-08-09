@@ -2,9 +2,6 @@ import React from "react";
 import "./Buttons.css";
 import StripeCheckout from "react-stripe-checkout";
 
-let DOMAIN = process.env.REACT_APP_DOMAIN;
-console.log("Domain:", DOMAIN);
-
 function Buttons({ type, title, disable, onClick, product }) {
   const makePayment = (token) => {
     const body = {
