@@ -31,7 +31,7 @@ function Buttons({ type, title, disable, onClick, product }) {
       token={makePayment}
       name="Deposit"
       amount={product.amount * 100} // Convert to cents
-      currency="EUR" // Use the appropriate currency
+      currency="EUR" 
     >
       <button
         className={`btn ${type === "deposit" && "deposit"}`}

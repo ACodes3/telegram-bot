@@ -2,7 +2,7 @@ import React from "react";
 import "./Cards.css";
 import Buttons from "../Buttons/Buttons";
 
-function Cards({ money }) { // Rename prop from money to product if preferred
+function Cards({ money }) {
   const { title, Image, amount } = money;
 
   return (
@@ -18,7 +18,7 @@ function Cards({ money }) { // Rename prop from money to product if preferred
         <Buttons
           title={"Deposit"}
           type={"deposit"}
-          product={money} // Pass the entire product object
+          product={money}
         />
       </div>
     </div>
